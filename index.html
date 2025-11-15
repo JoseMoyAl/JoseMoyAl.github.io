@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Para ti</title>
+
+    <!-- Fuente romántica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Sobre animado -->
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="words line1">Para: Mi Pucca</div>
+          <div class="words line2">Esta carta la hice de todo </div>
+          <div class="words line3">corazón para ti</div>
+          <div class="words line4">y tengo algo que decirte...</div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="reset">
+      <button id="open">ABRIR</button>
+      <button id="reset">TIRAR</button>
+    </div>
+
+    <!-- Carta grande en forma de acordeón (custom) -->
+    <div id="big-letter" class="big-letter hidden">
+      <h2>Para ti</h2>
+
+      <div class="accordion">
+
+        <div class="accordion-item" data-section="welcome">
+          <button class="accordion-header">Por dónde empiezo</button>
+          <div class="accordion-panel">
+            <p>
+              Desde que te conocí , sabía que eras una chica única e incomparable, algo dentro de mí me decía que eras la mujer con la que quiero pasar mis días.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-section="story">
+          <button class="accordion-header">Nuestra historia</button>
+          <div class="accordion-panel">
+            <p>
+              Quizá lo nuestro no surgió como un cuento de hadas, pero sí inició con sentimientos y palabras sinceras, eso vale mucho más que cualquier historia perfecta. Estoy emocionado porque juntos tú y yo escribiremos nuestro propio cuento de aventuras y capítulos por descubrir.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-section="feelings">
+          <button class="accordion-header">Te agradezco</button>
+          <div class="accordion-panel">
+            <p>
+            Te doy infinitas gracias por darme tu confianza, por hacerme sentir feliz, por permitirme quedarme en tu vida, por aceptarme tal como soy, por apoyarme en todo momento a pesar de la distancia, por escucharme y, sobre todo, por querer estar a mi lado.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-section="question">
+          <button class="accordion-header">Pregunto..</button>
+          <div class="accordion-panel">
+            <p>
+              Después de todo esto... lo correcto seria pedirlo de esta forma cierto ?
+              ¿Quieres ser mi novia?
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- jQuery y tu JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
