@@ -1,19 +1,17 @@
-/* Fondo general */
+/* Fondo general y centrado del contenido */
 body {
   background-color: #f0e6f6; /* Soft lavender */
-    background-color: #f0e6f6; /* Soft lavender */
   margin: 0;
-  min-height: 100vh;              /* el body mide al menos toda la pantalla */
-  display: flex;                  /* contenedor flex */
-  flex-direction: column;         /* elementos apilados en columna */
-  align-items: center;            /* centrado horizontal */
-  justify-content: center;        /* centrado vertical */
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centrado horizontal */
+  justify-content: center;  /* centrado vertical */
 }
 
 /* Wrapper del sobre */
 .envlope-wrapper {
-    margin-top: 0;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -26,7 +24,7 @@ body {
   border-bottom-right-radius: 6px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #d9534f;
+  background-color: #d9534f; /* Warm romantic red */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -115,25 +113,25 @@ body {
 /* Estados abierto/cerrado del sobre */
 .open .flap {
   transform: rotateX(180deg);
-  transition: transform 0.8s ease, z-index 0.6s;
+  transition: transform 0.4s ease, z-index 0.6s;
   z-index: 1;
 }
 
 .close .flap {
   transform: rotateX(0deg);
-  transition: transform 0.8s 0.6s ease, z-index 1s;
+  transition: transform 0.4s 0.6s ease, z-index 1s;
   z-index: 5;
 }
 
 .close .letter {
   transform: translateY(0px);
-  transition: transform 0.8s ease, z-index 1s;
+  transition: transform 0.4s ease, z-index 1s;
   z-index: 1;
 }
 
 .open .letter {
   transform: translateY(-100px);
-  transition: transform 0.8s 0.6s ease, z-index 0.6s;
+  transition: transform 0.4s 0.6s ease, z-index 0.6s;
   z-index: 2;
 }
 
@@ -267,7 +265,7 @@ body {
 
 .big-letter {
   max-width: 500px;
-  margin: 20px auto;          /* un poco de aire, pero no enorme */
+  margin: 20px auto;
   background: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -292,11 +290,11 @@ body {
   background: transparent;
   border: none;
   padding: 12px 8px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
   outline: none;
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive; /* o la fuente que elegiste */
 }
 
 .accordion-panel {
@@ -323,4 +321,58 @@ body {
 @keyframes fall-heart {
   0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
   100% { transform: translateY(110vh) translateX(30px) rotate(360deg); opacity: 0; }
+}
+
+/* Ajustes para pantallas pequeñas (móvil) */
+@media (max-width: 480px) {
+  /* Sobre más grande en móvil */
+  #envelope {
+    width: 320px;
+    height: 200px;
+  }
+
+  .flap {
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 90px solid transparent;
+    border-top: 110px solid #d9534f;
+  }
+
+  .pocket {
+    border-left: 160px solid #f5a3a2;
+    border-right: 160px solid #f5a3a2;
+    border-bottom: 100px solid #ff6f61;
+    border-top: 100px solid transparent;
+  }
+
+  .letter {
+    width: 92%;
+    height: 92%;
+  }
+
+  .envlope-wrapper {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .reset button {
+    min-width: 120px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .big-letter {
+    max-width: 95%;
+    margin: 20px auto 40px auto;
+    padding: 16px;
+  }
+
+  .accordion-header {
+    font-size: 1.1rem;
+    padding: 12px 8px;
+  }
+
+  .accordion-panel p {
+    font-size: 0.95rem;
+  }
 }
